@@ -1,34 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from './Navigation';
+import Home from './Home';
+import About from './About';
 import '../styles/App.css';
 
 const App = () => {
   return (
     <Router>
       <div className="app">
-        <nav className="nav">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-        
+        <Navigation />
         <Routes>
-          <Route path="/" element={
-            <div className="page">
-              <h1>Welcome to my website!</h1>
-            </div>
-          } />
-          
-          <Route path="/about" element={
-            <div className="page">
-              <h1>This is a sample React Router program.</h1>
-            </div>
-          } />
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </div>
     </Router>
