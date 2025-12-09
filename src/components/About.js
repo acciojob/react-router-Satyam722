@@ -1,11 +1,12 @@
-import React from 'react';
+import React from "react";
 
-const About = () => {
+function About() {
   return (
-    <div className="page about-page">
-      <h1>This is a sample React Router program.</h1>
+    <div>
+      <h2>About</h2>
+      <p>This is a sample React Router program.</p>
     </div>
   );
-};
+}
 
 export default About;
